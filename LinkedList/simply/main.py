@@ -6,6 +6,18 @@ class Node():
 class LinkedList():
     def __init__(self):
         self.head = None
+        self.lastNode = None
+
+    def add(self, data):
+
+        if self.head == None:
+            self.head = Node(data)
+            self.lastNode = self.head
+            
+            return
+
+        self.lastNode.next = Node(data)
+        self.lastNode = self.lastNode.next
 
     def printAll(self):
         tmp = self.head
@@ -20,11 +32,10 @@ if __name__ == '__main__':
 
     llist = LinkedList()
 
-    llist.head = Node(1)
-    second = Node(2)
-    third = Node(3)
+    llist.add(1)
+    llist.add(2)
+    llist.add(3)
 
-    llist.head.next = second
-    second.next = third
+    llist.add('What the bloody horse lungs....????')
 
     llist.printAll()
