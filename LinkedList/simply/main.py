@@ -7,6 +7,13 @@ class LinkedList():
     def __init__(self):
         self.head = None
 
+    def printAll(self):
+        tmp = self.head
+
+        while tmp:
+            print(tmp.data)
+            tmp = tmp.next
+
 
 if __name__ == '__main__':
     print('Hello LinkedList!!!\n')
@@ -19,3 +26,5 @@ if __name__ == '__main__':
 
     llist.head.next = second
     second.next = third
+
+    llist.printAll()
