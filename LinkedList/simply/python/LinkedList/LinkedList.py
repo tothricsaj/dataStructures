@@ -19,6 +19,18 @@ class LinkedList():
         self.lastNode.next = Node(data)
         self.lastNode = self.lastNode.next
 
+    def shift(self, data):
+        if self.head == None:
+            self.head = Node(data)
+            self.lastNode = self.head
+
+            return
+
+        tmp = self.head
+        self.head = Node(data)
+        self.head.next = tmp
+
+
     def printAll(self):
         tmp = self.head
 

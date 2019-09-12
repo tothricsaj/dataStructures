@@ -11,4 +11,11 @@ if __name__ == '__main__':
 
     llist.add('What the bloody horse lungs....????')
 
+    # llist.printAll()
+
+    llist.shift(0)
+    llist.shift(-1)
+    llist.shift(-2)
+    llist.shift(-3)
+
     llist.printAll()
