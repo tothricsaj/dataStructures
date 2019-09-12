@@ -19,6 +19,19 @@ exports.LinkedList = function() {
 		this.lastNode = this.lastNode.next;
 	}
 
+	this.shift = function(data) {
+		if(this.head === null) {
+			this.head = new Node(data);
+			this.lastNode = this.head;
+
+			return;
+		}
+
+		let tmp = this.head;
+		this.head = new Node(data);
+		this.head.next = tmp;
+	}
+
 	this.printAll = function() {
 		tmp = this.head;
 		while(tmp) {
