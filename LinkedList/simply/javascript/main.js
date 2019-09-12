@@ -7,6 +7,19 @@ function Node(data) {
 
 function LinkedList() {
 	this.head = null;
+	this.lastNode = null;
+
+	this.push = function(data) {
+		if(this.head === null) {
+			this.head = new Node(data);
+			this.lastNode = this.head;
+
+			return;
+		}
+
+		this.lastNode.next = new Node(data);
+		this.lastNode = this.lastNode.next;
+	}
 
 	this.printAll = function() {
 		tmp = this.head;
@@ -20,13 +33,10 @@ function LinkedList() {
 function main() {
 	let llist = new LinkedList();
 
-	llist.head = new Node(1);
-	second = new Node(2);
-	third = new Node(3);
-
-	llist.head.next = second;
-	second.next = third;
-
+	llist.push(1);
+	llist.push(2);
+	llist.push(3);
+	
 	llist.printAll();
 }
 
