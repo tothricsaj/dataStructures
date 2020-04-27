@@ -3,12 +3,11 @@
 // power(2,4) // 16
 
 function power(num1, num2){
-    let result = 1
     
-    if(num2 === 0) return result
+    if(num2 === 0) return 1
     
     function helper(counter) {
-        if(counter === 1) return result * num1
+        if(counter === 1) return 1 * num1
         
         counter--
         return num1 * helper(counter)
@@ -17,5 +16,6 @@ function power(num1, num2){
     return helper(num2)
 }
 
+console.log(power(3, 1))
 console.log(power(3, 2))
 console.log(power(2, 10))
