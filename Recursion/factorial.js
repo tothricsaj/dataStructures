@@ -8,4 +8,4 @@ function factorial(num){
     return helper(num)
 }
 
-console.log(factorial(7))
+console.log(factorial(0))
