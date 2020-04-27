@@ -17,4 +17,5 @@ function power(num1, num2){
     return helper(num2)
 }
 
-console.log(power(2, 4))
+console.log(power(3, 2))
+console.log(power(2, 10))
