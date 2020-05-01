@@ -3,9 +3,7 @@ function bubbleSort(arr) {
         for(let j=0; j<i; j++) {
             console.log(arr, arr[j], arr[j+1])
             if(arr[j] > arr[j+1]) {
-                let tmp = arr[j]
-                arr[j] = arr[j+1]
-                arr[j+1] = tmp
+                [arr[j], arr[j+1]] = [arr[j+1], arr[j]]
             }
         }
     }
